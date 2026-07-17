@@ -7,8 +7,8 @@ public:
   Libro(std::string titulo, std::string codigo, int anioPublicacion,
         std::string autor, int numeroPaginas);
 
+  int calcularHorasLectura();
   void mostrarDetalle() override;
-  void calcularTiempoLectura();
 
 private:
   std::string autor_;
