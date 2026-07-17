@@ -11,6 +11,6 @@ public:
   void mostrarCategoria();
 
 private:
-  std::string categoria;
-  int numeroEdicion;
+  std::string categoria_;
+  int numeroEdicion_;
 };

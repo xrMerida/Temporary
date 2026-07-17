@@ -11,6 +11,6 @@ public:
   void calcularTiempoLectura();
 
 private:
-  std::string autor;
-  int numeroPaginas;
+  std::string autor_;
+  int numeroPaginas_;
 };
