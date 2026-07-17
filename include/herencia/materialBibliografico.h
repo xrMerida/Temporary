@@ -6,8 +6,6 @@ public:
   MaterialBibliografico(std::string titulo, std::string codigo,
                         int anioPublicacion);
 
-  virtual ~MaterialBibliografico() = default;
-
   void mostrarInformacion();
   void prestarMaterial();
   void prestarMaterial(int diasPrestamo);
