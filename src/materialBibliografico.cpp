@@ -25,7 +25,7 @@ void MaterialBibliografico::prestarMaterial(int diasPrestamo) {
   if (disponible_) {
     disponible_ = false;
     std::cout << "Se ha prestado '" << titulo_ << "' por " << diasPrestamo
-              << "días" << std::endl;
+              << " días" << std::endl;
   } else {
     std::cerr << "Error: '" << titulo_ << "' ya esta prestado" << std::endl;
   }
