@@ -1,5 +1,6 @@
 #include "materialBibliografico.h"
 #include <iostream>
+#include <string>
 
 MaterialBibliografico::MaterialBibliografico(std::string titulo,
                                              std::string codigo,
@@ -29,6 +30,7 @@ void MaterialBibliografico::prestarMaterial(int diasPrestamo) {
   } else {
     std::cerr << "Error: '" << titulo_ << "' ya esta prestado" << std::endl;
   }
+  registrarPrestamo(diasPrestamo);
 }
 
 void MaterialBibliografico::prestarMaterial() { prestarMaterial(5); }
@@ -43,3 +45,14 @@ void MaterialBibliografico::devolverMaterial() {
 }
 
 void MaterialBibliografico::mostrarDetalle() { mostrarInformacion(); }
+
+void MaterialBibliografico::registrarPrestamo(int diasPrestamo) {
+  historial_.push_back("Se presto " + titulo_ + " por " +
+                       std::to_string(diasPrestamo));
+}
+
+void MaterialBibliografico::mostrarHistorial() {
+  for (auto prestamo : historial_) {
+    std::cout << prestamo << "\n";
+  }
+}

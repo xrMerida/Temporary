@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 class MaterialBibliografico {
 public:
@@ -10,6 +11,7 @@ public:
   void prestarMaterial();
   void prestarMaterial(int diasPrestamo);
   void devolverMaterial();
+  void mostrarHistorial();
   virtual void mostrarDetalle();
 
 private:
@@ -17,4 +19,7 @@ private:
   std::string codigo_;
   int anioPublicacion_;
   bool disponible_;
+  std::vector<std::string> historial_;
+
+  void registrarPrestamo(int dias);
 };

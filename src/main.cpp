@@ -38,6 +38,14 @@ int main() {
   revista2.prestarMaterial(7);
   cout << endl;
 
+  // Mostrar Historial
+  cout << "=== HISTORIAL DE PRÉSTAMOS ===\n";
+  libro1.mostrarHistorial();
+  libro2.mostrarHistorial();
+  revista1.mostrarHistorial();
+  revista2.mostrarHistorial();
+  cout << endl;
+
   // Ejecutar mostrar detalle de cada objeto
   cout << "=== DETALLE DE MATERIALES ===\n";
   libro1.mostrarDetalle();
